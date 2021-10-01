@@ -1,7 +1,5 @@
-// ignore_for_file: dead_code
-
 import 'package:flutter/material.dart';
-import 'package:network_test/home_page.dart';
+import 'package:network_test/page/post_Tile_page.dart';
 
 void main() {
   runApp(const TestJson());
@@ -17,7 +15,7 @@ class TestJson extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: HomePage(),
+      home: PostTilePage(),
     );
   }
 }
