@@ -1,5 +1,3 @@
-import 'dart:math';
-
 import 'package:flutter/material.dart';
 import 'package:network_test/api_Model.dart';
 import 'package:network_test/model/post_Model.dart';
@@ -43,21 +41,28 @@ class _PostTilePageState extends State<PostTilePage> {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            ...postList.map((e) {
-              return ListTileForm(
-                id: '${e.id}',
-                title: e.title,
-                userId: '${e.userId}',
-                onTap: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => CommentTilePage(postModel: e),
-                    ),
-                  );
-                },
-              );
-            }).toList()
+            if (postList.isNotEmpty)
+              ...postList.map((e) {
+                return ListTileForm(
+                  id: '${e.id}',
+                  title: e.title,
+                  userId: '${e.userId}',
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => CommentTilePage(postModel: e),
+                      ),
+                    );
+                  },
+                );
+              }).toList()
+            else
+              Center(
+                child: CircularProgressIndicator(
+                  color: Colors.red,
+                ),
+              )
           ],
         ),
       ),

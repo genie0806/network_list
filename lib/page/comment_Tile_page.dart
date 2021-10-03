@@ -38,9 +38,24 @@ class _CommentTilePageState extends State<CommentTilePage> {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            ...commentList.map((e) {
-              return ListTileForm(id: '${e.id}', title: e.name, userId: e.body);
-            }).toList()
+            if (commentList.isNotEmpty)
+              ...commentList.map((e) {
+                return ListTileForm(
+                    id: '${e.id}', title: e.name, userId: e.body);
+              }).toList()
+            else
+              Padding(
+                padding: const EdgeInsets.only(top: 320),
+                child: Center(
+                  child: SizedBox(
+                    child: CircularProgressIndicator(
+                      color: Colors.pink,
+                    ),
+                    height: 100,
+                    width: 100,
+                  ),
+                ),
+              )
           ],
         ),
       ),
