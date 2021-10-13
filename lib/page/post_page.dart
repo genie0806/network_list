@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:network_test/model.dart';
-import 'package:network_test/model/post_Model.dart';
+import 'package:network_test/model/post_model.dart';
 import 'package:network_test/page/comment_page.dart';
 import 'package:network_test/widget/listtile.dart';
 
@@ -58,7 +58,7 @@ class _PostTilePageState extends State<PostTilePage> {
                 );
               }).toList()
             else
-              Center(
+              const Center(
                 child: CircularProgressIndicator(
                   color: Colors.red,
                 ),

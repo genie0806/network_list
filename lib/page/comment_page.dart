@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:network_test/model.dart';
 import 'package:network_test/model/comments_model.dart';
-import 'package:network_test/model/post_Model.dart';
+import 'package:network_test/model/post_model.dart';
 import 'package:network_test/widget/listtile.dart';
 
 class CommentTilePage extends StatefulWidget {
