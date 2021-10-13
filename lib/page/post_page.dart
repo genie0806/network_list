@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:network_test/api_Model.dart';
+import 'package:network_test/model.dart';
 import 'package:network_test/model/post_Model.dart';
-import 'package:network_test/page/comment_Tile_Page.dart';
-import 'package:network_test/widget/list_Tile.dart';
+import 'package:network_test/page/comment_page.dart';
+import 'package:network_test/widget/listtile.dart';
 
 class PostTilePage extends StatefulWidget {
   const PostTilePage({Key key}) : super(key: key);
@@ -36,7 +36,7 @@ class _PostTilePageState extends State<PostTilePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('이제 좀 알거같은 Json'),
+        title: const Text('이제 좀 알거같은 Json'),
       ),
       body: SingleChildScrollView(
         child: Column(

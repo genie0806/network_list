@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:network_test/api_Model.dart';
-import 'package:network_test/model/comment_Model.dart';
+import 'package:network_test/model.dart';
+import 'package:network_test/model/comments_model.dart';
 import 'package:network_test/model/post_Model.dart';
-import 'package:network_test/widget/list_Tile.dart';
+import 'package:network_test/widget/listtile.dart';
 
 class CommentTilePage extends StatefulWidget {
   final PostModel postModel;
@@ -33,7 +33,7 @@ class _CommentTilePageState extends State<CommentTilePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('진짜로 알거같은 Json'),
+        title: const Text('진짜로 알거같은 Json'),
       ),
       body: SingleChildScrollView(
         child: Column(
@@ -44,8 +44,8 @@ class _CommentTilePageState extends State<CommentTilePage> {
                     id: '${e.id}', title: e.name, userId: e.body);
               }).toList()
             else
-              Padding(
-                padding: const EdgeInsets.only(top: 320),
+              const Padding(
+                padding: EdgeInsets.only(top: 320),
                 child: Center(
                   child: SizedBox(
                     child: CircularProgressIndicator(

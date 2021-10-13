@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:http/http.dart';
 
 class ListTileForm extends StatelessWidget {
   final String id;
@@ -13,10 +12,10 @@ class ListTileForm extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListTile(
-      leading: Text('${id}'),
+      leading: Text(id),
       title: Text(
         title,
-        style: TextStyle(fontWeight: FontWeight.bold),
+        style: const TextStyle(fontWeight: FontWeight.bold),
       ),
       subtitle: Text('작성자$userId'),
       onTap: onTap,

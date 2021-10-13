@@ -1,4 +1,4 @@
-import 'package:network_test/model/comment_Model.dart';
+import 'package:network_test/model/comments_model.dart';
 import 'package:network_test/model/post_Model.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert' as convert;
