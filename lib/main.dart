@@ -6,7 +6,7 @@ void main() {
 }
 
 class TestJson extends StatelessWidget {
-  const TestJson({Key key}) : super(key: key);
+  const TestJson({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

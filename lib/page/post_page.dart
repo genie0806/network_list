@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:network_test/model.dart';
-import 'package:network_test/model/post_model.dart';
+import 'package:network_test/model/posts_model.dart';
 import 'package:network_test/page/comment_page.dart';
 import 'package:network_test/widget/listtile.dart';
 
 class PostTilePage extends StatefulWidget {
-  const PostTilePage({Key key}) : super(key: key);
+  const PostTilePage({Key? key}) : super(key: key);
 
   @override
   _PostTilePageState createState() => _PostTilePageState();

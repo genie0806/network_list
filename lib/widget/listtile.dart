@@ -6,7 +6,12 @@ class ListTileForm extends StatelessWidget {
   final String userId;
   final Function() onTap;
 
-  const ListTileForm({Key key, this.id, this.title, this.userId, this.onTap})
+  const ListTileForm(
+      {Key? key,
+      required this.id,
+      required this.title,
+      required this.userId,
+      required this.onTap})
       : super(key: key);
 
   @override

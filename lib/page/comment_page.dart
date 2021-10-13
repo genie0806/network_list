@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:network_test/model.dart';
 import 'package:network_test/model/comments_model.dart';
-import 'package:network_test/model/post_model.dart';
+import 'package:network_test/model/posts_model.dart';
 import 'package:network_test/widget/listtile.dart';
 
 class CommentTilePage extends StatefulWidget {
   final PostModel postModel;
 
-  const CommentTilePage({Key key, this.postModel}) : super(key: key);
+  const CommentTilePage({Key? key, required this.postModel}) : super(key: key);
 
   @override
   _CommentTilePageState createState() => _CommentTilePageState();
@@ -41,7 +41,11 @@ class _CommentTilePageState extends State<CommentTilePage> {
             if (commentList.isNotEmpty)
               ...commentList.map((e) {
                 return ListTileForm(
-                    id: '${e.id}', title: e.name, userId: e.body);
+                  id: '${e.id}',
+                  title: e.name,
+                  userId: e.body,
+                  onTap: () {},
+                );
               }).toList()
             else
               const Padding(
